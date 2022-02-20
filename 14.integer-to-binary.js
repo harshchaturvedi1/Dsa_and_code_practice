@@ -4,6 +4,8 @@
 // if final quotient is 1 include it in result
 // reverse reminders and this is ans
 
+// time complexity -> log(n) ->as no. is getting divided by 2 each time
+
 // eg. 10
 // 10/2 -> r=0, q=5
 // 5/2 -> r=1, q=2
