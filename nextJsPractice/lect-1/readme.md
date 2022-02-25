@@ -54,12 +54,13 @@ Nested Pages
 For pages like /courses/ and /courses/full-stack-development, create a folder courses inside pages directory and create two files index.js and full-stack-development.
 // pages/courses/index.js
 
-const CoursesMainPage = () => (
+```const CoursesMainPage = () => (
 <>
 
 <h1>Courses</h1>
 </>
 );
+```
 
 export default CoursesMainPage;
 // pages/courses/full-stack-development.js
