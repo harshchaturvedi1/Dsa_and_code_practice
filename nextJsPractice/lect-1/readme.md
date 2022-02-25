@@ -174,7 +174,7 @@ export default withRouter(FSDCoursePage);
 
 - We will look at one in today's session getStaticProps
 
-##### getStaticProps (Static Generation)
+#### getStaticProps (Static Generation)
 
 This should return an object with,
 props (required - serializable object)
