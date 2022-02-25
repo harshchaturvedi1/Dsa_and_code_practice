@@ -65,21 +65,20 @@ For pages like /courses/ and /courses/full-stack-development, create a folder co
 export default CoursesMainPage;
 // pages/courses/full-stack-development.js
 
-const FSDCoursePage = () => (
+```const FSDCoursePage = () => (
 <>
 
 <h1>Full Stack Development Course</h1>
 </>
 );
+```
 
 export default FSDCoursePage;
 Navigating between pages
 Next.js provides a Link component to allow client-side navigation between pages.
 // pages/index.js
 
----
-
-import Link from 'next/link';
+```import Link from 'next/link';
 
 const IndexPage = () => (
 <>
@@ -89,15 +88,12 @@ const IndexPage = () => (
 </>
 );
 export default IndexPage;
-
----
+```
 
 We can also navigate imperatively in Next.js using useRouter hook and withRouter HOC.
 // pages/about.js
 
----
-
-import { useRouter } from 'next/router'
+```import { useRouter } from 'next/router'
 
 const AboutPage = () => {
 const router = useRouter();
@@ -111,10 +107,9 @@ return (
 
 export default AboutPage;
 // pages/index.js
+```
 
----
-
-import Link from 'next/link';
+```import Link from 'next/link';
 import { withRouter } from 'next/router';
 
 const IndexPage = (props) => (
@@ -127,12 +122,14 @@ const IndexPage = (props) => (
 );
 
 export default withRouter(IndexPage);
+```
+
 Dynamic routing
 For pages like /courses/:id with :id being a dynamic value, we can create a file like [id].js where id will be available as a query param for the page.
 
 The query params from props.router.query are only available on the client-side. On server-side, props.router.query will be an empty object.
 
-// pages/courses/[id].js
+```// pages/courses/[id].js
 
 import { withRouter } from "next/router";
 
@@ -157,6 +154,7 @@ console.log(props.router.query);
 };
 
 export default withRouter(FSDCoursePage);
+```
 
 #### 03 - Data Fetching Methods
 
