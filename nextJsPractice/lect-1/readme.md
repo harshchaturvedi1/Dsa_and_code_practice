@@ -181,7 +181,7 @@ props (required - serializable object)
 notFound (optional - boolean)
 // pages/courses/index.js
 
-const CoursesMainPage = (props) => {
+```const CoursesMainPage = (props) => {
 console.log(props);
 
     return (
@@ -204,3 +204,4 @@ courses: ['Full Stack Web Development', 'Full Stack Android Development'],
 }
 
 export default CoursesMainPage;
+```
