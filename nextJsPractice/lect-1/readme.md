@@ -14,16 +14,19 @@
 - .next
 
 4. Add NPM scripts
-   // package.json
+
+```// package.json
 
 "scripts": {
 "dev": "next dev",
 "build": "next build",
 "start": "next start"
 },
+```
 
 5. Create a new directory pages and create a new file index.js inside the directory.
-   // pages/index.js
+
+- // pages/index.js
 
 const IndexPage = () => <p>Index Page</p>;
 
@@ -45,16 +48,20 @@ Next.js uses file system based routing. Which means each page (route) correspond
 
 Simple Pages
 For /about, create a new file about.js in pages directory.
-// pages/about.js
+
+```// pages/about.js
 
 const AboutPage = () => <p>About Page</p>;
 
 export default AboutPage;
+```
+
 Nested Pages
 For pages like /courses/ and /courses/full-stack-development, create a folder courses inside pages directory and create two files index.js and full-stack-development.
-// pages/courses/index.js
 
-```const CoursesMainPage = () => (
+```// pages/courses/index.js
+
+const CoursesMainPage = () => (
 <>
 
 <h1>Courses</h1>
@@ -63,9 +70,10 @@ For pages like /courses/ and /courses/full-stack-development, create a folder co
 ```
 
 export default CoursesMainPage;
-// pages/courses/full-stack-development.js
 
-```const FSDCoursePage = () => (
+```// pages/courses/full-stack-development.js
+
+const FSDCoursePage = () => (
 <>
 
 <h1>Full Stack Development Course</h1>
@@ -76,9 +84,10 @@ export default CoursesMainPage;
 export default FSDCoursePage;
 Navigating between pages
 Next.js provides a Link component to allow client-side navigation between pages.
-// pages/index.js
 
-```import Link from 'next/link';
+```// pages/index.js
+
+import Link from 'next/link';
 
 const IndexPage = () => (
 <>
@@ -91,9 +100,10 @@ export default IndexPage;
 ```
 
 We can also navigate imperatively in Next.js using useRouter hook and withRouter HOC.
-// pages/about.js
 
-```import { useRouter } from 'next/router'
+````// pages/about.js
+
+import { useRouter } from 'next/router'
 
 const AboutPage = () => {
 const router = useRouter();
@@ -106,10 +116,9 @@ return (
 )};
 
 export default AboutPage;
-// pages/index.js
-```
+``` // pages/index.js
 
-```import Link from 'next/link';
+import Link from 'next/link';
 import { withRouter } from 'next/router';
 
 const IndexPage = (props) => (
@@ -122,7 +131,7 @@ const IndexPage = (props) => (
 );
 
 export default withRouter(IndexPage);
-```
+````
 
 Dynamic routing
 For pages like /courses/:id with :id being a dynamic value, we can create a file like [id].js where id will be available as a query param for the page.
