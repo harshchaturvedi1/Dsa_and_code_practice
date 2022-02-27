@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+exports.message = void 0;
+exports.message = "hello  world ! welcome";
+console.log(exports.message);
+var isBegineer = true;
+var total = 0;
+var name = "Harsh";
+var sentence = "my name is ".concat(name, "\ni am a beginner i ts");
+console.log(sentence);
