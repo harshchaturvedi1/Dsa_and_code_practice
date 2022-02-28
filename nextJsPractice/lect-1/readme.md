@@ -1,3 +1,7 @@
+#### document link
+
+- https://github.com/harshchaturvedi1/learn-next-js
+
 #### 01 - Create Next App
 
 1. Initialize a NPM project. The following command will create a package.json file with sensible defaults.
