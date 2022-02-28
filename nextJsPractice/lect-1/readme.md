@@ -2,6 +2,7 @@
 
 1. Initialize a NPM project. The following command will create a package.json file with sensible defaults.
 
+- use node version latest
 - npm init -y
 
 2. Install necessary dependencies.
