@@ -71,16 +71,31 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
-        var form = document.getElementById("form");
-        var input = document.getElementById("input");
+
+        let pName = ""
+        if (!pName) {
+            pName = prompt("enter your name", "")
+        }
+
+        let form = document.getElementById("form");
+        let input = document.getElementById("input");
+        let message = document.getElementById("messages")
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             if (input.value) {
+                // socket.emit('chat message', { [pName]: input.value });
                 socket.emit('chat message', input.value);
-                socket.on("recieved", msg => console.log(msg))
+                // socket.on("recieved", msg => console.log(msg))
                 input.value = "";
             }
+        })
+
+        socket.on('chat message', function (msg) {
+            let item = document.createElement('li');
+            item.textContent = msg;
+            message.appendChild(item);
+            window.scrollTo(0, document.body.scrollHeight)
         })
 
     </script>
