@@ -10,22 +10,26 @@ const io = new Server(server);
 
 app.get("/", (req, res) => {
   //   res.send("<h3>Hello World</h3>");
-  res.sendFile(__dirname + "/client.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 io.on("connection", (socket) => {
-  console.log("a user connected");
+  // console.log("a user connected", socket.id);
+  // console.log("socket ==>>", socket);
+
+  // io.emit("user connected")
+
   socket.on("chat message", (msg) => {
-    // console.log("message", msg);
+    console.log("message", msg);
     // socket.emit("recieved", "message recieved");
     // socket.broadcast.emit("chat message", msg);
     io.emit("chat message", msg);
   });
   socket.on("disconnect", () => {
-    console.log("user disconnected");
+    console.log("user disconnected", socket.id);
   });
 });
 
-server.listen(3000, () => {
-  console.log(`listening on port 3000`);
+server.listen(4000, () => {
+  console.log(`listening on port 4000`);
 });
