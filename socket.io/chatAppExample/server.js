@@ -10,14 +10,16 @@ const io = new Server(server);
 
 app.get("/", (req, res) => {
   //   res.send("<h3>Hello World</h3>");
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/client.html");
 });
 
 io.on("connection", (socket) => {
   console.log("a user connected");
   socket.on("chat message", (msg) => {
-    console.log("message", msg);
-    socket.emit("recieved", "message recieved");
+    // console.log("message", msg);
+    // socket.emit("recieved", "message recieved");
+    // socket.broadcast.emit("chat message", msg);
+    io.emit("chat message", msg);
   });
   socket.on("disconnect", () => {
     console.log("user disconnected");
