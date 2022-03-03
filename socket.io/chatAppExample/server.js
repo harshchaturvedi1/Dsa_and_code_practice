@@ -13,20 +13,40 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+let userCollections = [];
+
 io.on("connection", (socket) => {
   // console.log("a user connected", socket.id);
   // console.log("socket ==>>", socket);
 
   // io.emit("user connected")
 
+  socket.on("Joined and left", (name) => {
+    // socket.broadcast.emit("new User Joined", msg);
+    userCollections.push({ id: socket.id, user: name });
+    io.emit("Joined and left", { typeOfMessage: "new-joined", userName: name });
+  });
+
   socket.on("chat message", (msg) => {
-    console.log("message", msg);
+    // console.log("message", msg);
     // socket.emit("recieved", "message recieved");
     // socket.broadcast.emit("chat message", msg);
     io.emit("chat message", msg);
   });
   socket.on("disconnect", () => {
-    console.log("user disconnected", socket.id);
+    // console.log("user disconnected", socket.id);
+    // socket.broadcast.emit("new User Joined", msg);
+    let exitedUser = "";
+    for (item of userCollections) {
+      if (item.id === socket.id) {
+        exitedUser = item.user;
+        break;
+      }
+    }
+    io.emit("Joined and left", {
+      typeOfMessage: "user-left",
+      userName: exitedUser,
+    });
   });
 });
 

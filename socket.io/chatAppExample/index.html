@@ -19,7 +19,6 @@
         height: 95vh;
         background-color: grey;
         border: 1px solid;
-        overflow: scroll;
     }
 
     #form {
@@ -60,6 +59,7 @@
         margin: 0;
         padding: 0;
         height: 94%;
+        overflow: scroll;
     }
 
     .leftSide {
@@ -92,12 +92,21 @@
         border-radius: 10px;
         padding: 5px 10px;
     }
+
+    .joinedAndLeft {
+        border-radius: 8px;
+        width: fit-content;
+        padding: 3px 18px;
+        margin: 1px auto;
+        font-family: initial;
+        background-color: #cbcbcb;
+    }
 </style>
 
 <body>
     <div class="mainWrapper">
         <div id="messages">
-
+            <!-- <div class="joinedAndLeft"><i> harsh joined chat</i></div> -->
         </div>
         <div class="formWrapper">
             <form id="form">
@@ -115,6 +124,7 @@
 
         if (!pName) {
             pName = prompt("enter your name");
+            socket.emit('Joined and left', pName)
         }
 
         var form = document.getElementById("form");
@@ -162,8 +172,26 @@
             }
             item.append(msgContainer);
             message.appendChild(item);
-            window.scrollTo(0, document.body.scrollHeight);
+
+            var div = document.getElementById("messages");
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+
+
         });
+
+        socket.on("Joined and left", msgData => {
+            let div = document.createElement("div");
+            let inner = document.createElement("i");
+            div.setAttribute("class", "joinedAndLeft");
+
+            if (msgData.typeOfMessage === "user-left")
+                inner.textContent = `${msgData.userName} left the chat`;
+            else if (msgData.typeOfMessage === "new-joined")
+                inner.textContent = `${msgData.userName} joined the chat`;
+
+            div.append(inner)
+            message.appendChild(div)
+        })
     </script>
 </body>
 
