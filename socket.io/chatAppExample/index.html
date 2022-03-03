@@ -115,13 +115,14 @@
             </form>
         </div>
     </div>
-
+    <!-- importing socket to file -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
+        // initialize socket
         var socket = io();
 
         let pName = "";
-
+        // accepting user name and emit a action to send everyone user joined message 
         if (!pName) {
             pName = prompt("enter your name");
             socket.emit('Joined and left', pName)
@@ -131,6 +132,7 @@
         var input = document.getElementById("input");
         var message = document.getElementById("messages");
 
+        // when message is send 
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             if (input.value) {
@@ -142,6 +144,7 @@
             }
         });
 
+        // appending message send by others to ui
         socket.on("chat message", (msg) => {
             let item = document.createElement("div");
             let msgContainer = document.createElement("div");
@@ -174,11 +177,13 @@
             message.appendChild(item);
 
             var div = document.getElementById("messages");
+            // scrolling to end of page on new message
             div.scrollTop = div.scrollHeight - div.clientHeight;
 
 
         });
 
+        // when a user joined or leaves chat notify others
         socket.on("Joined and left", msgData => {
             let div = document.createElement("div");
             let inner = document.createElement("i");
