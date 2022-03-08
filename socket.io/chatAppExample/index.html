@@ -121,10 +121,14 @@
         // initialize socket
         var socket = io();
 
+        function getName() {
+            let pName = prompt("please enter your name");
+            return pName
+        }
         let pName = "";
         // accepting user name and emit a action to send everyone user joined message 
-        if (!pName) {
-            pName = prompt("enter your name");
+        while (!pName || pName.trim() === "" || pName === ".") {
+            pName = getName()
             socket.emit('Joined and left', pName)
         }
 
