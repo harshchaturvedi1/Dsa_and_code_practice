@@ -30,8 +30,8 @@ return prevProps.value === nextProps.value;
 
 ### 4. useCallback
 
-```const next1 = useCallback(() => setPrime((prev) => prev + 1),[]);
-
+```
+const next1 = useCallback(() => setPrime((prev) => prev + 1),[]);
 ```
 
 - useCallback uses some dependency -> so as the dependency changes the function is called again
@@ -41,8 +41,8 @@ return prevProps.value === nextProps.value;
 
 - instead of memoizing whole component we can just memoized a function
 
-```const val = useMemo(() => getNthPrimeNo(value), [value]);
-
+```
+const val = useMemo(() => getNthPrimeNo(value), [value]);
 ```
 
 - expansive operation is being memoized
