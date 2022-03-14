@@ -19,7 +19,8 @@
 
 ### 3. Passing comparator function
 
-```export default React.memo(GetPrime, (prevProps, nextProps) => {
+```
+export default React.memo(GetPrime, (prevProps, nextProps) => {
 return prevProps.value === nextProps.value;
 });
 ```
