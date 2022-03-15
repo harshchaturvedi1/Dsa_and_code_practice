@@ -1,0 +1,14 @@
+.parentWrapper {
+  width: 200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.parentWrapper > div {
+  border: 1px solid;
+  border-radius: 5px;
+}
