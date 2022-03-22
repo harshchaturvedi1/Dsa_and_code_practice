@@ -70,7 +70,7 @@ export const ShowValue = ({ val, setValue }) => {
         {/* {ButtonArray.map((item) => (
           <Button
             key={item.key}
-            text={item.text}
+            text={item.text}git 
             num={item.val === "*2" ? val : item.val}
             handleClick={handleClick}
           />
