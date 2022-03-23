@@ -1,0 +1,49 @@
+[
+    {
+        "name":"Restaurant1",
+        "img":"http://via.placeholder.com/200x200",
+        "pay":{
+            "card":true,
+            "cash":false,
+            "upi":true
+        },
+        "votes":200,
+        "reviews":100,
+        "cost_for":{
+            "one":150,
+            "two":250
+        },
+        "rating":4.2,
+        "time":"30 min",
+        "min_price":50,
+        "category":[
+            "continental",
+            "dessert",
+            "asian"
+        ]
+
+    },
+    {
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for":{
+            "one":100,
+            "two":250
+        },
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    }
+]
