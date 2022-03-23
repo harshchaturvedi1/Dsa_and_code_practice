@@ -1,10 +1,10 @@
 import "./App.css";
-import data from "./assets/data.json";
-import { useEffect } from "react";
+import { Navbar } from "./Components/Navbar/Navbar";
+
 function App() {
   return (
     <div className="App">
-      <img src="http://via.placeholder.com/200x200" />
+      <Navbar />
     </div>
   );
 }
