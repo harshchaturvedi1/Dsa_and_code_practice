@@ -11,7 +11,7 @@ export const RestaurantDetails = () => {
     <>
       <Routes>
         <Route path="/" element={<ShowData restData={restData} />} />
-        <Route path="/addNew" element={<Form />} />
+        <Route path="/addNew" element={<Form setRestData={setRestData} />} />
       </Routes>
     </>
   );

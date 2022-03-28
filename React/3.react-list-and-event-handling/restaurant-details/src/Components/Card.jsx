@@ -32,7 +32,7 @@ export const CardDetails = ({ restaurant }) => {
       <img src={restaurant.img} alt="" />
       <p>{restaurant.name}</p>
       <p>Payment Accepted : </p>
-      {restaurant.pay.card && <li>acrd</li>}
+      {restaurant.pay.card && <li>card</li>}
       {restaurant.pay.cash && <li>cash</li>}
       {restaurant.pay.upi && <li>upi</li>}
       <p>rating : {restaurant.rating}</p>
@@ -42,7 +42,7 @@ export const CardDetails = ({ restaurant }) => {
       <p>min Price : {restaurant.min_price}</p>
       <p>Cost for one : {restaurant.cost_for.one}</p>
       <div>
-        Server :{" "}
+        Serves :{" "}
         {restaurant.category.map((item) => (
           <p>{item}</p>
         ))}{" "}
