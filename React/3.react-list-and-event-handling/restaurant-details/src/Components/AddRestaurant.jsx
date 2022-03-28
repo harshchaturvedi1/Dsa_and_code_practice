@@ -28,6 +28,7 @@
 
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import { Link } from "react-router-dom";
 const init = {
   id: "",
   name: "",
@@ -72,13 +73,16 @@ export const Form = ({ setRestDetails }) => {
     } else {
       handleFormData(e.target);
     }
-    console.log(formData);
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
   return (
     <div>
-      <form>
+      <Link to="/">Show restaurants</Link>
+      <form onSubmit={handleSubmit}>
         <input
           name="name"
           type="text"
@@ -146,6 +150,7 @@ export const Form = ({ setRestDetails }) => {
           <label>upi</label>
           <input type="checkbox" name="upi" onChange={handlehange} />
         </div>
+        <input type="submit" />
       </form>
     </div>
   );
