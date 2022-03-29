@@ -10,10 +10,7 @@
         },
         "votes":200,
         "reviews":100,
-        "cost_for":{
-            "one":150,
-            "two":250
-        },
+        "cost_for_one":150,
         "rating":4.2,
         "time":"30 min",
         "min_price":50,
@@ -35,10 +32,7 @@
         },
         "votes":100,
         "reviews":50,
-        "cost_for":{
-            "one":100,
-            "two":250
-        },
+        "cost_for_one":50,
         "rating":3.2,
         "time":"20 min",
         "min_price":30,

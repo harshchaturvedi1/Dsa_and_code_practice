@@ -29,8 +29,9 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 const init = {
-  id: "",
+  id: "dummy",
   name: "",
   img: "",
   votes: 0,
@@ -47,7 +48,7 @@ const init = {
   cost_for_one: 0,
 };
 
-export const Form = ({ setRestDetails }) => {
+export const Form = ({ setRestData }) => {
   const [formData, setFormData] = useState(init);
 
   const handleFormData = ({ name, value }) => {
@@ -63,7 +64,7 @@ export const Form = ({ setRestDetails }) => {
   };
 
   const handlehange = (e) => {
-    const { name, value } = e.target;
+    const { name } = e.target;
     if (name === "category") {
       handleCategory(e.target);
     } else if (name === "pay") {
@@ -77,8 +78,13 @@ export const Form = ({ setRestDetails }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setRestData((prev) => [...prev, formData]);
   };
+
+  useEffect(() => {
+    setFormData({ ...formData, ["id"]: nanoid() });
+  }, []);
+
   return (
     <div>
       <Link to="/">Show restaurants</Link>
