@@ -41,5 +41,446 @@
             "dessert"
         ]
 
+    },
+    {
+        "id":3,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":4,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":5,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":6,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":7,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":8,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":9,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":10,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":11,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":12,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":13,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":14,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":15,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":16,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":17,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":18,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":19,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":20,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":21,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":22,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
+    },
+    {
+        "id":23,
+        "name":"Restaurant2",
+        "img":"http://via.placeholder.com/300x200",
+        "pay":{
+            "card":false,
+            "cash":true,
+            "upi":false
+        },
+        "votes":100,
+        "reviews":50,
+        "cost_for_one":50,
+        "rating":3.2,
+        "time":"20 min",
+        "min_price":30,
+        "category":[
+            "fast food",
+            "dessert"
+        ]
+
     }
 ]

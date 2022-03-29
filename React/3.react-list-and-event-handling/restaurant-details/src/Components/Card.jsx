@@ -36,11 +36,13 @@ export const CardDetails = ({ restaurant }) => {
         display: "flex",
         flexDirection: "row",
       }}
+      key={restaurant.id}
     >
       <div style={{}}>
         <img src={restaurant.img} alt="" />
       </div>
       <div style={{ border: "1px solid" }}>
+        {restaurant.id}
         <p>{restaurant.name}</p>
         <p>Payment Accepted : </p>
         {restaurant.pay.card && <li>card</li>}
