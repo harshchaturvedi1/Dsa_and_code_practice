@@ -7,11 +7,11 @@ export const ShowData = ({ restData }) => {
   const [page, setPage] = useState(1);
   const [tempData, setTempData] = useState([]);
 
-  const handleData = () => {
+  const handleDataByPage = () => {
     let temp = [];
     let init = 5 * (page - 1);
     let end = 5 * page;
-    // limits acording to page
+    // limits according to page
     for (let i = init; i < end && i < restData.length; i++) {
       temp.push(restData[i]);
     }
@@ -19,7 +19,7 @@ export const ShowData = ({ restData }) => {
   };
 
   useEffect(() => {
-    handleData();
+    handleDataByPage();
   }, [page]);
 
   return (
@@ -41,12 +41,28 @@ export const ShowData = ({ restData }) => {
           <CardDetails restaurant={item} key={item.id} />
         ))}
       </div>
+      <PrevButton page={page} setPage={setPage} />
+      <NextButton page={page} setPage={setPage} restData={restData} />
+    </>
+  );
+};
+
+const PrevButton = ({ page, setPage }) => {
+  return (
+    <>
       <button
         disabled={page === 1 ? true : false}
         onClick={() => setPage(page - 1)}
       >
         Prev
       </button>
+    </>
+  );
+};
+
+const NextButton = ({ page, setPage, restData }) => {
+  return (
+    <>
       <button
         disabled={page >= restData.length / 5 ? true : false}
         onClick={() => setPage(page + 1)}
