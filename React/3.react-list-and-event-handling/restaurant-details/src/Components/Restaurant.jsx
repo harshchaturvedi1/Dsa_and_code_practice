@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import data from "../assets/data.json";
-import { Form } from "./AddRestaurant";
+import { FormData } from "./AddRestaurant";
 import { ShowData } from "./ShowData";
 
 export const RestaurantDetails = () => {
@@ -11,7 +11,10 @@ export const RestaurantDetails = () => {
     <>
       <Routes>
         <Route path="/" element={<ShowData restData={restData} />} />
-        <Route path="/addNew" element={<Form setRestData={setRestData} />} />
+        <Route
+          path="/addNew"
+          element={<FormData setRestData={setRestData} />}
+        />
       </Routes>
     </>
   );

@@ -30,6 +30,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Form, Input } from "antd";
 const init = {
   id: "dummy",
   name: "",
@@ -48,7 +49,7 @@ const init = {
   cost_for_one: 0,
 };
 
-export const Form = ({ setRestData }) => {
+export const FormData = ({ setRestData }) => {
   const [formData, setFormData] = useState(init);
 
   const handleFormData = ({ name, value }) => {
@@ -88,6 +89,7 @@ export const Form = ({ setRestData }) => {
   return (
     <div>
       <Link to="/">Show restaurants</Link>
+
       <form onSubmit={handleSubmit}>
         <input
           name="name"
