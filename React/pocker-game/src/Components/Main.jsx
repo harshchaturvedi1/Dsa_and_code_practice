@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
-
+import { RoyalFlush } from "../assets/assets";
+import { DisplayCards } from "./DisplayCards";
+import "./Main.css";
 const types = ["hearts", "clubs", "spades", "diamonds"];
+/**
+ * @description contains all the cards of deck
+ */
 let cards = [];
 for (let i = 0; i < 4; i++) {
   for (let j = 2; j <= 14; j++) {
@@ -53,52 +58,31 @@ export const Main = () => {
     }
   };
 
+  const calcaulateWinner = () => {
+    console.log(RoyalFlush, typeof RoyalFlush);
+    RoyalFlush(player1);
+  };
+
   useEffect(() => {
     acceptNames();
     fillValues();
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        width: "300px",
-        justifyContent: "space-between",
-        margin: "auto",
-      }}
-    >
-      <div>
-        <h3>{name1}</h3>
-        {player1.map((e) => (
-          <ShowCards card={e} />
-        ))}
+    <>
+      <div className="main">
+        <div className="firstDiv">
+          <h3>{name1}</h3>
+          <DisplayCards player={player1} />
+        </div>
+        <div>
+          <h3>{name2}</h3>
+          <DisplayCards player={player2} />
+        </div>
       </div>
-      <div>
-        <h3>{name2}</h3>
-        {player2.map((e) => (
-          <ShowCards card={e} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const ShowCards = ({ card }) => {
-  return (
-    <div>
-      <p>{card.type}</p>
-      <p>
-        {card.value === 14
-          ? "Ace"
-          : card.value === 13
-          ? "king"
-          : card.value === 12
-          ? "queen"
-          : card.value === 11
-          ? "Joker"
-          : card.value}
-      </p>
-    </div>
+      <button onClick={calcaulateWinner} className="winner-button">
+        FindWinner
+      </button>
+    </>
   );
 };

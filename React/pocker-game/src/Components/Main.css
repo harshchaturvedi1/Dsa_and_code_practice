@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-evenly;
+  margin: auto;
+}
+.firstDiv {
+  border-right: 1px solid;
+  padding-right: 40px;
+}
+.winner-button {
+  margin-top: 50px;
+}
