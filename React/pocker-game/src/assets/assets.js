@@ -127,11 +127,10 @@ function twoPair(cards) {
       obj[e.value] = p + 1;
     }
   });
-
   let keys = Object.keys(obj);
   if (keys.length !== 3) return false;
   for (let i = 0; i < keys.length; i++) {
-    if (obj[keys[i]] !== 2 || obj[keys[i]] !== 1) return false;
+    if (obj[keys[i]] != 2 && obj[keys[i]] != 1) return false;
   }
   return true;
 }
@@ -160,23 +159,35 @@ function highCard(player1, player2) {
   player1.sort((a, b) => a.value - b.value);
   player2.sort((a, b) => a.value - b.value);
   for (let i = 0; i < 5; i++) {
-    if (player1.value > player2.value) {
+    if (player1[i].value > player2[i].value) {
       return "player1";
-    } else if (player1.value < player2.value) {
+    } else if (player1[i].value < player2[i].value) {
       return "player2";
     }
   }
+
+  return "tie";
 }
-export {
-  royalFlush,
-  totalValue,
-  straightFlush,
-  fourOfKind,
-  fullHouse,
-  flush,
-  straight,
-  threeOfKind,
-  twoPair,
-  pair,
-  highCard,
-};
+
+let temp = [
+  { type: "diamonds", value: 2 },
+  { type: "spades", value: 2 },
+  { type: "clubs", value: 6 },
+  { type: "clubs", value: 12 },
+  { type: "diamonds", value: 12 },
+];
+
+console.log(twoPair(temp));
+// export {
+//   royalFlush,
+//   totalValue,
+//   straightFlush,
+//   fourOfKind,
+//   fullHouse,
+//   flush,
+//   straight,
+//   threeOfKind,
+//   twoPair,
+//   pair,
+//   highCard,
+// };
