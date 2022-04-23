@@ -107,11 +107,10 @@ function threeOfKind(cards) {
       obj[e.value] = p + 1;
     }
   });
-
   let keys = Object.keys(obj);
   if (keys.length !== 3) return false;
   for (let i = 0; i < keys.length; i++) {
-    if (obj[keys[i]] !== 3 || obj[keys[i]] !== 1) return false;
+    if (obj[keys[i]] !== 3 && obj[keys[i]] !== 1) return false;
   }
   return true;
 }
@@ -130,7 +129,7 @@ function twoPair(cards) {
   let keys = Object.keys(obj);
   if (keys.length !== 3) return false;
   for (let i = 0; i < keys.length; i++) {
-    if (obj[keys[i]] != 2 && obj[keys[i]] != 1) return false;
+    if (obj[keys[i]] !== 2 && obj[keys[i]] !== 1) return false;
   }
   return true;
 }
@@ -150,7 +149,7 @@ function pair(cards) {
   let keys = Object.keys(obj);
   if (keys.length !== 4) return false;
   for (let i = 0; i < keys.length; i++) {
-    if (obj[keys[i]] !== 2 || obj[keys[i]] !== 1) return false;
+    if (obj[keys[i]] !== 2 && obj[keys[i]] !== 1) return false;
   }
   return true;
 }
@@ -170,24 +169,24 @@ function highCard(player1, player2) {
 }
 
 let temp = [
-  { type: "diamonds", value: 2 },
-  { type: "spades", value: 2 },
-  { type: "clubs", value: 6 },
-  { type: "clubs", value: 12 },
-  { type: "diamonds", value: 12 },
+  { type: "diamonds", value: 8 },
+  { type: "clubs", value: 8 },
+  { type: "hearts", value: 5 },
+  { type: "spades", value: 5 },
+  { type: "clubs", value: 7 },
 ];
 
-console.log(twoPair(temp));
-// export {
-//   royalFlush,
-//   totalValue,
-//   straightFlush,
-//   fourOfKind,
-//   fullHouse,
-//   flush,
-//   straight,
-//   threeOfKind,
-//   twoPair,
-//   pair,
-//   highCard,
-// };
+// console.log("pair", pair(temp));
+export {
+  royalFlush,
+  totalValue,
+  straightFlush,
+  fourOfKind,
+  fullHouse,
+  flush,
+  straight,
+  threeOfKind,
+  twoPair,
+  pair,
+  highCard,
+};

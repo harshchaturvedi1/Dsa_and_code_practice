@@ -33,6 +33,8 @@ export const Main = () => {
   const [name1, setName1] = useState("h");
   const [name2, setName2] = useState("a");
 
+  const [showWinner, setShowWinner] = useState("");
+
   const acceptNames = () => {
     let temp = "";
     temp = prompt("enter name of player1");
@@ -47,6 +49,9 @@ export const Main = () => {
   }
 
   const fillValues = () => {
+    setPlayer1([]);
+    setPlayer2([]);
+    setShowWinner("");
     let NegletValues = [];
     let i = 1;
     while (i <= 10) {
@@ -72,31 +77,36 @@ export const Main = () => {
 
   const tieBreaker = (category) => {
     if (totalValue(player1) > totalValue(player2)) {
-      console.log("player 1");
+      // console.log("player 1");
+      setShowWinner(`${name1}=>${category}`);
     } else if (totalValue(player2) > totalValue(player1)) {
-      console.log("player 2");
+      // console.log("player 2");
+      setShowWinner(`${name2}=>${category}`);
     } else {
-      console.log("tie", category);
+      // console.log("tie", category);
+      setShowWinner(`tie ${category}`);
     }
   };
 
   const calcaulateWinner = () => {
-    console.log(player1, player2);
+    // console.log(player1, player2);
 
     //check if player 1 is royal flush
     if (royalFlush(player1)) {
       // if player 2 is also royal flush
       if (royalFlush(player2)) {
-        console.log(tieBreaker("royal flush"));
+        tieBreaker("royal flush");
       }
       // else if player 2 is not royal flush
       else {
-        console.log("player 1 royal flush");
+        // console.log("player 1 royal flush");
+        setShowWinner(`${name1}, royal flush`);
       }
     }
     // else if player 2 is royal flush
     else if (royalFlush(player2)) {
-      console.log("player 2 royal flush");
+      // console.log("player 2 royal flush");
+      setShowWinner(`${name2}, royal flush`);
     }
     //check if player 1 is straight flush
     else if (straightFlush(player1)) {
@@ -106,12 +116,14 @@ export const Main = () => {
       }
       // if player 2 is  not a straight flush
       else {
-        console.log("player 1 straight Flush");
+        // console.log("player 1 straight Flush");
+        setShowWinner(`${name1}, straight Flush`);
       }
     }
     // if only player 2 is straight flush
     else if (straightFlush(player2)) {
-      console.log("player 2 straight Flush");
+      // console.log("player 2 straight Flush");
+      setShowWinner(`${name2}, straight Flush`);
     }
     // if player 1 is four of a kind
     else if (fourOfKind(player1)) {
@@ -121,12 +133,14 @@ export const Main = () => {
       }
       // if only player 1 is four of a kind
       else {
-        console.log("player 1 four of a kind");
+        // console.log("player 1 four of a kind");
+        setShowWinner(`${name1}, four of a kind`);
       }
     }
     // if only player 2 is four of a kind
     else if (fourOfKind(player2)) {
-      console.log("player 2 four of a kind");
+      // console.log("player 2 four of a kind");
+      setShowWinner(`${name2}, four of a kind`);
     }
     // if player 1 fullHouse
     else if (fullHouse(player1)) {
@@ -136,12 +150,14 @@ export const Main = () => {
       }
       // else if only player 1 is fullHouse
       else {
-        console.log("player 1 full House");
+        // console.log("player 1 full House");
+        setShowWinner(`${name1}, full House`);
       }
     }
     // if only player 2 is fullHouse
     else if (fullHouse(player2)) {
-      console.log("player 2 full House");
+      // console.log("player 2 full House");
+      setShowWinner(`${name2} , full House`);
     }
     // if player 1 is flush
     else if (flush(player1)) {
@@ -151,12 +167,14 @@ export const Main = () => {
       }
       // if only player 1 is flush
       else {
-        console.log("player 1 flush");
+        // console.log("player 1 flush");
+        setShowWinner(`${name1}, flush`);
       }
     }
     // if only player 2 is flush
     else if (flush(player2)) {
-      console.log("player 2 flush");
+      // console.log("player 2 flush");
+      setShowWinner(`${name2}, flush`);
     }
     // if player 1 is straight
     else if (straight(player1)) {
@@ -166,12 +184,14 @@ export const Main = () => {
       }
       // if only player 1 is straight
       else {
-        console.log("player 1 straight");
+        // console.log("player 1 straight");
+        setShowWinner(`${name1} ,straight`);
       }
     }
     // if only player 2 is straight
     else if (straight(player2)) {
-      console.log("player 2 straight");
+      // console.log("player 2 straight");
+      setShowWinner(`${name2}, straight`);
     }
     // if player 1 is three Of Kind
     else if (threeOfKind(player1)) {
@@ -181,12 +201,14 @@ export const Main = () => {
       }
       // if only player 1 is three Of Kind
       else {
-        console.log("player 1 three Of Kind");
+        // console.log("player 1 three Of Kind");
+        setShowWinner(`${name1}, three Of Kind`);
       }
     }
     // if only player 2 is three Of Kind
     else if (threeOfKind(player2)) {
-      console.log("player 2 three Of Kind");
+      // console.log("player 2 three Of Kind");
+      setShowWinner(`${name2}, three Of Kind`);
     }
     // if player 1 is twoPair
     else if (twoPair(player1)) {
@@ -196,12 +218,14 @@ export const Main = () => {
       }
       // if only player 1 is twoPair
       else {
-        console.log("player 1 twoPair");
+        // console.log("player 1 twoPair");
+        setShowWinner(`${name1}, twoPair`);
       }
     }
     // if only player 2 is twoPair
     else if (twoPair(player2)) {
-      console.log("player 2 twoPair");
+      // console.log("player 2 twoPair");
+      setShowWinner(`${name2}, twoPair`);
     }
     // if player 1 is pair
     else if (pair(player1)) {
@@ -211,29 +235,47 @@ export const Main = () => {
       }
       // if only player 1 have pair
       else {
-        console.log("player 1 pair");
+        // console.log("player 1 pair");
+        setShowWinner(`${name1}, pair`);
       }
     }
     // if only player 2 is pair
     else if (pair(player2)) {
-      console.log("player 2 pair");
+      // console.log("player 2 pair");
+      setShowWinner(`${name2}, pair`);
     }
     // end compare high cards
     else {
-      console.log(highCard(player1, player2), " high card");
+      // console.log(highCard(player1, player2), " high card");
+      let highCardWinner = highCard(player1, player2);
+      if (highCardWinner === "player1") {
+        setShowWinner(`${name1} , high card`);
+      } else {
+        setShowWinner(`${name2} , high card`);
+      }
     }
   };
 
   useEffect(() => {
-    // acceptNames();
+    acceptNames();
     fillValues();
   }, []);
 
   return (
     <>
-      <button onClick={calcaulateWinner} className="winner-button">
-        FindWinner
-      </button>
+      {showWinner && (
+        <div>
+          <p>Winner is {`${showWinner}`}</p>
+        </div>
+      )}
+      <div className="button-container">
+        <button onClick={calcaulateWinner} className="winner-button">
+          FindWinner
+        </button>
+        <button onClick={fillValues} className="winner-button">
+          Reset
+        </button>
+      </div>
       <div className="main">
         <div className="firstDiv">
           <h3>{name1}</h3>

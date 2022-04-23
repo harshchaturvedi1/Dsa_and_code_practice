@@ -9,6 +9,11 @@
   border-right: 1px solid;
   padding-right: 40px;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 .winner-button {
   margin-top: 50px;
+  margin-left: 10px;
 }
